@@ -1,0 +1,350 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: beige; 
+    }
+    
+    header {
+        background-color: #e9d2d2;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    header h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 6rem;
+    }
+    header h2 {
+        font-family: 'Arial';
+        font-size: 15px;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .slider {
+        width: 60%;
+        height: 300px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+    .slides {
+        width: 300%;
+        height: 100%;
+        display: flex;
+    }
+    
+    .slides input {
+        display: none;
+    }
+    
+    .slide {
+        width: 33.33%;
+        transition: 1s;
+    }
+    
+    .slide img {
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 100%;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 0 10px;
+    }
+    
+    .manual-btn:not(:last-child) {
+        margin-right: 10px;
+    }
+    
+    .manual-btn:hover {
+        background: #fff;
+    }
+    
+    #radio1:checked ~ .first {
+        margin-left: 0;
+    }
+    
+    #radio2:checked ~ .first {
+        margin-left: -33.33%;
+    }
+    
+    #radio3:checked ~ .first {
+        margin-left: -66.66%;
+    }
+    
+    .navigation-auto {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: -90px;
+    }
+    
+    .auto-btn1, .auto-btn2, .auto-btn3 {
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 0 10px;
+    }
+    
+    section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .collection-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+    }
+    
+    .collection-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    form label {
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    
+    form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+    }
+    
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tiendas Charly </h1>
+        <h2>📍Tienda SPS, 🕙LUN-SAB 08:00am-6:00pm
+            📲3330-8582
+            ❌No se aceptan cambios,ni devoluciones
+            🚚Envios a Nivel Nacional... 
+            más
+            wa.me/message/DTLKGCQLU4DUP1</h2>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio </a></li>
+                <li><a href="#collections">Contactanos</a></li>
+                <li><a href="#contact"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <div class="slide first">
+                    <img src="jumpi.png" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="ashley.jfif" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="bombero.jfif" alt="Slide 3">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
+
+    <section id="collections">
+        <h2>NUESTRAS COLECCIONES COMO TIENDA CHARLY</h2>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <img src="como trenzada.jpeg" alt="Producto 1">
+                <h3>Muy comodas  </h3>
+                <p>Perfectas para cualquier ocasion.</p>
+            </div>
+            <div class="collection-item">
+                <img src="dorada y plateada.jfif" alt="Producto 2">
+                <h3>Sandalias</h3>
+                <p>Ideal para salir al moll.</p>
+            </div>
+            <div class="collection-item">
+                <img src="como de faja.jfif" alt="Producto 2">
+                <h3>Muy lindas</h3>
+                <p>Ideal para salir a la playa .</p>
+            </div>
+            <div class="collection-item">
+                <img src="chamarras.jfif" alt="Producto 2">
+                <h3>Chamarras </h3>
+                <p>Perfecto para tu salida de invierno.</p>
+            </div>
+            <div class="collection-item">
+                <img src="blusas.jfif" alt="Producto 2">
+                <h3>Blusas diferentes colores</h3>
+                <p>Ideal para un estilo sofisticado.</p>
+            </div>
+            <div class="collection-item">
+                <img src="vestido.jfif" alt="Producto 2">
+                <h3>Vestido comodo </h3>
+                <p>Para cualquier ocasion.</p>
+            </div>
+            <div class="collection-item">
+                <img src="lentes.jfif" alt="Producto 2">
+                <h3>Lentes de moda</h3>
+                <p>Ideal para un dia de playa o salida casual.</p>
+            </div>
+            <div class="collection-item">
+                <img src="vestido azul.jfif" alt="Producto 2">
+                <h3>Vestido de cuello halter con volantes, terciopelo</h3>
+                <p>Ideal para un estilo sofisticado.</p>
+            </div>
+            <div class="collection-item">
+                <img src="carteras.jfif" alt="Producto 2">
+                <h3>Carteras </h3>
+                <p>Ideal para una salida .</p>
+            </div>
+            <div class="collection-item">
+                <img src="traje completo.jpg" alt="Producto 2">
+                <h3>Conjunto </h3>
+                <p>Perfecto para un estilo libre.</p>
+            </div>
+            <div class="collection-item">
+                <img src="tacones.jfif" alt="Producto 2">
+                <h3>Tacones </h3>
+                <p>Ideal para un dia de fiesta.</p>
+            </div>
+            <div class="collection-item">
+                <img src="quincy.jfif" alt="Producto 2">
+                <h3>Zapatillas</h3>
+                <p>Para cualquier ocasion .</p>
+            </div>
+            <div class="collection-item">
+                <img src="plataforma.jfif" alt="Producto 2">
+                <h3>Sandalia Plataforma </h3>
+                <p>Buena para una ocacion formal .</p>
+            </div>
+            <div class="collection-item">
+                <img src="aruba.jfif" alt="Producto 2">
+                <h3>Tenis deportivo </h3>
+                <p>Perfecto  para ir al gym .</p>
+            </div>
+            <div class="collection-item">
+                <img src="tenis.jfif" alt="Producto 2">
+                <h3>Tenis</h3>
+                <p>Ideal para salir al parque.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 📍Tiendas Charly . Envios a todo Honduras .</p>
+    </footer>
+
+    <script src="script.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
